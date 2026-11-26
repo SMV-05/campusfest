@@ -33,6 +33,9 @@ export function spotsLabel(event) {
 // ---------- Precio ----------
 
 export function formatPrice(price) {
+  if (price === 0) {
+    return 'Gratis';
+  }
   return `$${price}`;
 }
 
