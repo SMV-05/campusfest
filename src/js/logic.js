@@ -57,6 +57,9 @@ export function daysUntil(dateStr, todayStr) {
 
 export function countdownLabel(dateStr, todayStr) {
   const days = daysUntil(dateStr, todayStr);
+  if (days < 0) {
+    return 'Finalizado';
+  }
   if (days === 0) {
     return 'Hoy';
   }
